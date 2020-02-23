@@ -1,0 +1,17 @@
+nav.navbar.navbar-expand-sm.bg-dark.navbar-dark
+  a#heading.navbar-brand(href="/") Notes
+
+  <!-- Links -->
+  ul.navbar-nav.ml-auto
+    if (originalUser)
+      li.nav-item
+          a.nav-link(href="/add") Add Notes
+      li.nav-item
+          a.nav-link(href="/logout") Logout
+
+    else
+      li.nav-item
+          a.nav-link(href="/login") Login
+      li.nav-item
+          a.nav-link(href="/signup") Sign up
+

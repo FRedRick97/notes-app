@@ -1,0 +1,26 @@
+extends ../layout.pug
+
+block content
+    .form-box-signin
+        form(method="post" id="login-form" action="/signup")
+            .mid-signin
+                input.signin-input(type="text" name="email" placeholder='Email ID' autocomplete="off")
+            br
+            .mid-signin
+                input.signin-input(type="password" name="password" placeholder='Password')
+            br
+            .mid-signin
+                input.signin-input(type="password" name="confirm" placeholder='Confirm Password')
+            br
+            .mid-signin
+                input.signin-input(type="text" name="name" placeholder='Name' autocomplete="off")
+            br
+            .mid-signin
+                input(type="submit" value="SIGN UP")
+            if (errors.length > 0)
+                br
+                .alert.alert-danger.alert-dismissible
+                    a.close(href='#' data-dismiss='alert' aria-label='close') &times;
+                    strong Oops!
+                    |  #{errors}
+
